@@ -4,16 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beloved Community Doula — Home</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="/css/styles.css"/>
 </head>
 <body data-page="home">
+  <!-- NAV sits at the top -->
+  <div data-include="/partials/nav.html"></div>
+
+  <!-- Main centered content -->
   <div class="page-wrapper">
-    <div data-include="partials/nav.html"></div>
-
     <header>
-        <h1>Beloved Community Doula</h1>
+      <h1>Beloved Community Doula</h1>
     </header>
-
 
     <main class="container">
       <section class="section">
@@ -23,7 +24,10 @@
     </main>
   </div>
 
-  <div data-include="partials/footer.html"></div>
-  <script src="js/include.js"></script>
+  <!-- Footer sits at the bottom -->
+  <div data-include="/partials/footer.html"></div>
+
+  <script src="/js/include.js"></script>
+  <script src="/js/theme.js"></script>
 </body>
 </html>

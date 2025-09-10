@@ -24,20 +24,15 @@
       }
     }
 
-    // Highlight active link
-    const page = document.body.dataset.page;
-    const map = {
-      home: 'index.html',
-      solutions: 'solutions.html',
-      blog: 'blog.html',
-      refs: 'references.html',
-      contact: 'contact.html'
-    };
-    const href = map[page];
-    if (href) {
-      const a = document.querySelector(`nav.site-nav a[href="${href}"]`);
-      if (a) a.classList.add('is-active');
-    }
+    // Wait a bit for nav to load into DOM
+    setTimeout(() => {
+      const currentPath = window.location.pathname;
+      const currentFile = currentPath.substring(currentPath.lastIndexOf("/") + 1) || "index.html";
+
+      document.querySelectorAll(`nav.site-nav a[href$="${currentFile}"]`).forEach((a) => {
+        a.classList.add('is-active');
+      });
+    }, 50); // slight delay to ensure injected nav is present
   };
 
   if (document.readyState === 'loading') {
