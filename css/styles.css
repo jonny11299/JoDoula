@@ -89,6 +89,13 @@ p {
   margin: 1.5rem 0;
 }
 
+.section-sep {
+  border: 0;                 /* remove default 3D border */
+  border-top: 3px solid currentColor; /* solid line; inherits text color */
+  margin: 2rem 0;            /* spacing above/below */
+  opacity: 0.4;              /* optional: soften a bit */
+}
+
 /* ------------------------ IMAGES & SECTIONS ------------------------- */
 
 .image-container img {
