@@ -10,13 +10,22 @@ body {
   font-size: 18px;
   line-height: 1.6;
   background-color: #a5be9c; /* base sage */
-  background-image: url('/assets/bg-tile.jpg'); /* customize with your tile */
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-size: auto;
+  background-image: url('/imgs/flowersbg.png'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   color: #222;
   padding: 2rem 1rem;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(165, 190, 156, 0.75); /* semi-transparent sage overlay */
+  z-index: -1;
+}
+
 
 /* Shared frame styling for nav, content, footer */
 nav.site-nav,
