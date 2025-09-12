@@ -1,4 +1,1 @@
-first readme
-still pending
-
-website hosted thru github. Yay!
+html framework for my boo's doula career
